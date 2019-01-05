@@ -16,7 +16,7 @@
     "babel-jest": "^23.6.0",
     "jest": "23.6.0",
     "metro-react-native-babel-preset": "0.51.1",
-    "react-native-testing-library": "^1.5.0",
+    "react-native-testing-library": "https://github.com/TAGraves/react-native-testing-library",
     "react-test-renderer": "16.6.3"
   },
   "jest": {

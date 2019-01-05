@@ -5,8 +5,6 @@ This exercise will introduce you to Jest, the test runner and framework that we'
 
 We'll run Jest from the command line. 
 
-🚨 The `solutions` directory contains possible solutions for the exercises. Use this to verify your own solutions, get yourself unstuck, or to catch up if you fall behind in the exercises.
-
 ### 1
 🚀  To run your first Jest test, run the following from the project root. This tells us to run the *first* test (`-t 1`) in exercise-1.
 ```bash
