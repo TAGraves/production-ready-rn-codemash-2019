@@ -1,38 +1,38 @@
-# Exercise 1
-## Introduction to Testing with Jest
+# Exercise 2
+## Introduction to React Components
 
-This exercise will introduce you to Jest, the test runner and framework that we'll be using in this workshop. We'll use Jest throughout the workshop to ensure that we've correctly completed the exercises.
+This exercise will introduce you to React components. Components are at the heart of React and React Native; they're *the* key concept to understand.
 
-We'll run Jest from the command line. 
+Think of a component as a piece of user interface. Some components are *atomic*, or very small: buttons, inputs, basic blocks of text. Other components *compose* the small components to form partials, sections, or even entire screens. In React, every piece of user interface is a component that builds itself out of other components.
+
+To create our components, we'll use JSX. JSX is a special syntax addition to JavaScript that allows you to declaratively define a user interface. If you've worked with HTML or XML, the syntax should be familiar!
 
 ### 1
-🚀  To run your first Jest test, run the following from the project root. This tells us to run the *first* test (`-t 1`) in exercise-1.
+Take a look at `box.js`. This module exports a component named `Box`. There are a few different ways to write components in React, but for these exercises we'll always use the *class* syntax. React class components have a few distinct pieces:
+* They always inherit from `React.Component`
+* They always have a `render()` method that returns the UI for the component determined by JSX.
+
+Right now, our `Box` component just returns a `View`. The `View` component in React Native doesn't do anything on its own - it just wraps other things and optionally styles them. 
+
+🚀 Let's see what our "box" looks like. Run the React Native application:
 ```bash
-yarn test exercises/exercise-1 -t 1
+react-native run:ios
+```
+or
+```bash
+react-native run:android
 ```
 
-You should see some output like the following:
-```
-$ jest exercises/exercise-1 -t 1
- PASS  exercises/exercise-1/hello-world.test.js
-  helloWorld
-    1
-      when the name is CodeMash
-        ✓ says hello (3ms)
-    2
-      when the name is ____
-        ○ skipped 1 test
-    3
-      when the name is bad
-        ○ skipped 1 test
+You should just see the text "Exercise 2" in your emulator.
 
-Test Suites: 1 passed, 1 total
-Tests:       2 skipped, 1 passed, 3 total
-Snapshots:   0 total
-Time:        0.617s, estimated 1s
+Let's spice up our box a little bit by adding some text. React Native gives us a `Text` component that we can put text in.
+
+🚀 Add the text `I am in a box` to the box component. You should see the text when reloading the emulator. You can also verify your solution by running the test for step one of this exercise:
+```bash
+yarn test exercises/exercise-2 -t 1
 ```
 
-🚨 Not seeing the above? Try to find a helpful neighbor, or raise your hand and ask for help!
+💡 Annoyed at having to refresh the emulator to see updates? Turn on live reloading by opening the developer menu (`cmd + d` for XCode, `cmd/control + m` for Android Studio) and selecting `Enable Live Reload`.
 
 ### 2
 Take a look at `hello-world.js`. This module exports a simple function that says hello to the world and to the name passed in, except for when the name is bad. Now look at the first test in `hello-world.test.js` and examine what the test that we ran in step 1 actually does.
